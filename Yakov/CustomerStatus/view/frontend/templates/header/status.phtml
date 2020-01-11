@@ -1,0 +1,20 @@
+<span class="yakov-customer-header-status" id="yakov_customer_header_status">
+</span>
+
+<script type="text/javascript">
+    require(['jquery'], function ($) 
+    {
+        const getCustomerStatusUrl = '<?php echo $block->getCustomerStatusUrl() ?>';
+        
+        $(document).ready(function(){
+            $.ajax({
+                url: getCustomerStatusUrl,
+                method: "POST",
+                dataType: "text"
+            })
+            .done(function(customerStatus) {
+                $('#yakov_customer_header_status').text(customerStatus);
+            });
+        });
+    });
+</script>

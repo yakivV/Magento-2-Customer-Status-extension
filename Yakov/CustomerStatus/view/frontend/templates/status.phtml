@@ -1,0 +1,30 @@
+<form class="form form-status" id="yakov_form_status" method="post" action="<?php echo $block->getSaveStatusUrl(); ?>">
+    <?php echo $block->getBlockHtml('formkey'); ?>
+    <fieldset class="fieldset">
+        <legend class="legend">
+          <span>Status</span>
+        </legend>
+        <br />
+        <div class="field">
+            <input 
+              type="text"
+              class="input-text"
+              name="customer_status"
+              id="customer_status"
+              placeholder="Type status here (max 12 symbols)"
+              maxlength="12" />
+        </field>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" title="Save" class="action save primary">
+                <span>Save</span>
+            </button>
+        </div>
+        <div class="secondary">
+            <a class="action back" href="<?php echo $block->getBackUrl(); ?>">
+                <span>Back</span>
+            </a>
+        </div>
+    </div>
+</form>

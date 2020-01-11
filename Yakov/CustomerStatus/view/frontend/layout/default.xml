@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+       <css src="Yakov_CustomerStatus::css/status.css" />
+    </head>
+    <body>
+        <referenceContainer name="header.panel">
+            <block
+                class="Yakov\CustomerStatus\Block\HeaderStatus"
+                name="yakov_customer_header_status"
+                after="top.links"
+                template="Yakov_CustomerStatus::header/status.phtml"
+            />
+        </referenceContainer>
+    </body>
+</page>
